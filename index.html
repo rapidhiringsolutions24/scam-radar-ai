@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scam Radar AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="font-family: Arial; text-align: center; padding: 40px;">
+
+  <h1>🚨 Scam Radar AI</h1>
+  <p>Check if a website, email, or crypto project is a scam.</p>
+
+  <input id="input" placeholder="Enter website or message" style="width: 80%; padding: 10px;">
+  <br><br>
+
+  <button onclick="scan()" style="padding: 10px 20px;">Scan Now</button>
+
+  <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+
+  <script>
+    function scan() {
+      let input = document.getElementById("input").value;
+      if (input === "") {
+        document.getElementById("result").innerText = "Enter
