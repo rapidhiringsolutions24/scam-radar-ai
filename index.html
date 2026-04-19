@@ -1,25 +1,89 @@
 
+<
 <!DOCTYPE html>
 <html>
 <head>
   <title>Scam Radar AI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .box {
+      background: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 8px;
+      border: none;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial; text-align: center; padding: 40px;">
+<body>
 
-  <h1>🚨 Scam Radar AI</h1>
-  <p>Check if a website, email, or crypto project is a scam.</p>
+<h1>🚨 Scam Radar AI</h1>
+<p>Check if a website, email, or crypto project is a scam</p>
 
-  <input id="input" placeholder="Enter website or message" style="width: 80%; padding: 10px;">
-  <br><br>
+<div class="box">
+  <input id="input" placeholder="Enter website, email, or message">
 
-  <button onclick="scan()" style="padding: 10px 20px;">Scan Now</button>
+  <button onclick="scan()">Scan Now</button>
 
-  <p id="result" style="margin-top: 20px; font-weight: bold;"></p>
+  <div class="result" id="result"></div>
+</div>
 
-  <script>
-    function scan() {
-      let input = document.getElementById("input").value;
-      if (input === "") {
-        document.getElementById("result").innerText = "Enter
+<script>
+function scan() {
+  let input = document.getElementById("input").value;
+
+  if (!input) {
+    document.getElementById("result").innerHTML = "⚠️ Enter something first";
+    return;
+  }
+
+  // Fake logic for now (we'll upgrade next)
+  if (input.includes("crypto") || input.includes("free") || input.includes("win")) {
+    document.getElementById("result").innerHTML = "⚠️ High Risk Scam Detected";
+  } else {
+    document.getElementById("result").innerHTML = "✅ Likely Safe";
+  }
+}
+</script>
+
+</body>
+</html>
